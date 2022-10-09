@@ -1,5 +1,12 @@
+import { FeatureGlobal } from "../components/feature_global/feature_global";
+import { Container } from "../components/feature_global/feature_global_styled";
+
 export const Pix = () => {
     return (
-        <p>pix</p>
-    )
+        <Container>
+            <FeatureGlobal>
+                <p>pix</p>
+            </FeatureGlobal>
+        </Container>
+    );
 };

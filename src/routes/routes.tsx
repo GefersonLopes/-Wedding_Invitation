@@ -11,7 +11,7 @@ import { Route, Routes } from "react-router-dom";
 export const RouteInPage = (): any => {
     return (
         <Routes>
-            <Route path="/intro" element={<Intro />} />
+            <Route path="/" element={<Intro />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard/locale" element={<Locale />} />
             <Route path="/dashboard/presence" element={<Presence />} />
