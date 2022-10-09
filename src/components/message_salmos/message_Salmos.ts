@@ -1,9 +1,4 @@
-import React from "react"
 import styled from "styled-components";
-/* 
-    font-family: 'Alice', serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Shadows Into Light', cursive; */
 
 export const H3 = styled.h3`
     font-family: 'Shadows Into Light';
@@ -41,17 +36,3 @@ export const Div_message = styled.div`
         gap: 3rem;
     }
 `;
-
-export const Img = styled.img`
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-
-`;
-
-export const Div_logo = styled.div`
-    width: 100%;
-`

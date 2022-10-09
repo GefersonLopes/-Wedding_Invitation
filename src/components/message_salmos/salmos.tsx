@@ -1,4 +1,4 @@
-import { Div_message, H3 } from "../intro/intro_Styled";
+import { Div_message, H3 } from "./message_Salmos";
 
 export const Salmos = () => (
     <Div_message>

@@ -1,5 +1,12 @@
+import { FeatureGlobal } from "../components/feature_global/feature_global";
+import { Container } from "../components/feature_global/feature_global_styled";
+
 export const Presence = () => {
     return (
-        <p>presença</p>
-    )
+        <Container>
+            <FeatureGlobal>
+                <p>presença</p>
+            </FeatureGlobal>
+        </Container>
+    );
 };
