@@ -1,10 +1,13 @@
 import "./App.css";
+import { ContextProvider } from "./context/Context";
 import { RouteInPage } from "./routes/routes";
 
 function App() {
     return (
         <>
-            <RouteInPage />
+            <ContextProvider>
+                <RouteInPage />
+            </ContextProvider>
         </>
     );
 }

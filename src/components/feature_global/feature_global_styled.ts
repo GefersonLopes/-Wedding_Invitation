@@ -38,7 +38,7 @@ export const ImgAnimate = styled.img`
     right: ${props => props.width};
     top: ${props => props.color};
     left: ${props => props.sizes};
-    bottom: 0;
+    bottom: 0.3rem;
     width: 6rem;
     height: 6rem;
 `;
