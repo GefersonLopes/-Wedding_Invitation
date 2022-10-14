@@ -4,14 +4,23 @@ import { INode } from "../context/Context";
 export const TransitionRoutesTop = ({ children }: INode) => {
     return (
         <motion.div
-            initial={{ x: -30, y: 190 }}
-            animate={{
+        initial={{ x: -30, y: 190 }}
+        style={{
+            position: "absolute",
+            top: "-6rem",
+            right: "2.5rem",
+            width: "6rem",
+            height: "6rem",
+            padding: 0,
+            margin: 0
+        }}
+        animate={{
                 x: 35,
                 y: 100,
             }}
             transition={{ duration: 0.8 }}
-            exit={{ x: 0, y: 0 }}
-        >
+            exit={{ x: -30, y: 190 }}
+            >
             {children}
         </motion.div>
     );
@@ -20,13 +29,22 @@ export const TransitionRoutesTop = ({ children }: INode) => {
 export const TransitionRoutesBottom = ({ children }: INode) => {
     return (
         <motion.div
+        style={{
+            position: "absolute",
+            bottom: "0.85rem",
+            left: "8.2rem",
+            width: "6rem",
+            height: "6rem",
+            padding: 0,
+            margin: 0
+        }}
             initial={{ x: -20, y: -100 }}
                 animate={{
                     x: -128,
                     y: 5,
                 }}
+                exit={{ x: -20, y: -100 }}
                 transition={{ duration: 0.8 }}
-                exit={{ opacity: 0 }}
         >
             {children}
         </motion.div>

@@ -4,12 +4,13 @@ import { INode } from "../context/Context";
 export const AnimateIntroLogo = ({children}: INode) => {
     return (
         <motion.main
+        style={{width: "90%"}}
             initial={{ opacity: 0 }}
             animate={{
                 opacity: 1,
             }}
-            transition={{ duration: 2.5 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 2.5 }}
         >
             {children}
         </motion.main>
