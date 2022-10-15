@@ -19,7 +19,7 @@ export const TransitionRoutesTop = ({ children }: INode) => {
                 y: 100,
             }}
             transition={{ duration: 0.8 }}
-            exit={{ x: -30, y: 190 }}
+          
             >
             {children}
         </motion.div>
@@ -43,7 +43,7 @@ export const TransitionRoutesBottom = ({ children }: INode) => {
                     x: -128,
                     y: 5,
                 }}
-                exit={{ x: -20, y: -100 }}
+               
                 transition={{ duration: 0.8 }}
         >
             {children}

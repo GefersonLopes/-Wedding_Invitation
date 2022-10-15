@@ -18,25 +18,29 @@ import { useContext } from "react";
 import { Context } from "../context/Context";
 import { Button } from "../components/buttons/button";
 
-export const Intro = () => {
+export const Intro_part2 = () => {
     const seconds = CountTime();
     const { navigate } = useContext(Context);
-    if(seconds > 4) {
-        navigate("/dashboard/intro/2");
+    if(seconds > 10) {
+        navigate("/dashboard/intro/3");
     }
     return (
         <>
             <Container>
-                {" "}
-                {/* Div que centraliza os elementos filhos */}
                 <FeatureGlobal>
-                    {" "}
-                    {/* Section/Feature principal de cor vinho */}
-                    <AlterRoutes /> {/* Animação de transição de cada rota */}
+                    <AlterRoutes />
                     <AnimateIntroLogo>
-                        {" "}
-                        {/* Animação Logo Inicial "TN" */}
-                        <Img src={TN} alt="título" /> {/* Imagem TN */}
+                        <H1 color="left" title="40px">
+                            ESTÁ <br /> CHEGANDO <br /> O DIA!!!
+                        </H1>
+                        <br />
+                        <H1 color="center" title="40px">
+                            DO NOSSO <br /> CASAMENTO :)
+                        </H1>
+                        <br />
+                        <H1 color="Right" title="40px">
+                            E VOCÊ FOI <br /> CONVIDADO(A)!
+                        </H1>
                     </AnimateIntroLogo>
                 </FeatureGlobal>
             </Container>

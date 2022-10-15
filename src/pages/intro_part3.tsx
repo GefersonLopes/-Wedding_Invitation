@@ -18,25 +18,32 @@ import { useContext } from "react";
 import { Context } from "../context/Context";
 import { Button } from "../components/buttons/button";
 
-export const Intro = () => {
+export const Intro_part3 = () => {
     const seconds = CountTime();
     const { navigate } = useContext(Context);
-    if(seconds > 4) {
-        navigate("/dashboard/intro/2");
-    }
     return (
         <>
             <Container>
-                {" "}
-                {/* Div que centraliza os elementos filhos */}
                 <FeatureGlobal>
-                    {" "}
-                    {/* Section/Feature principal de cor vinho */}
-                    <AlterRoutes /> {/* Animação de transição de cada rota */}
+                    <AlterRoutes />
                     <AnimateIntroLogo>
-                        {" "}
-                        {/* Animação Logo Inicial "TN" */}
-                        <Img src={TN} alt="título" /> {/* Imagem TN */}
+                        <H2>
+                            José Juraci Da Luz Lopes <br /> Maurina Almeida
+                            Lopes <br /> E <br /> Neuza Santos Oliveira <br />{" "}
+                            Valter Santos Oliveira
+                            {/* JOSÉ JURACI DA LUZ LOPES <br /> MAURINA
+                                    ALMEIDA LOPES <br /> E <br /> NEUZA SANTOS
+                                    OLIVEIRA <br /> VALTER SANTOS OLIVEIRA */}
+                        </H2>
+                        <H1 color="center" title="18px" theme={"1.5rem"}>
+                            CONVIDAM PARA A CERIMÔNIA DO SEUS FILHOS
+                        </H1>
+                        <button
+                            className="button"
+                            onClick={() => navigate("/dashboard")}
+                        >
+                            <Button>Avançar</Button>
+                        </button>
                     </AnimateIntroLogo>
                 </FeatureGlobal>
             </Container>

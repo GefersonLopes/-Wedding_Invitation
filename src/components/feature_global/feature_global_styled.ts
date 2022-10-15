@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Section = styled.section`
     position: relative;
 
-    height: 80%;
-    width: 80%;
+    height: 20rem;
+    width: 16rem;
 
     display: flex;
     flex-direction: column;
@@ -14,15 +14,15 @@ export const Section = styled.section`
 
     background-color: rgba(75, 25, 47, 0.6);
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.25);
-
-    @media screen and (min-width: 425px) {
-        width: 60vw;
-        height: 65vw;   
+     
+    @media screen and (min-width: 1024px){
+        height: 25rem;
+        width: 20rem;
     }
 
-    @media screen and (min-width: 650px) {
-        width: 40vw;
-        height: 35vw;   
+    @media screen and (min-width: 1440px){
+        height: 35rem;
+        width: 30rem;
     }
 `;
 
@@ -52,10 +52,10 @@ export const ImgAnimateBottom = styled.img`
 export const H1 = styled.h1`
     color:#ffffff;
     width: 100%;
-    font-weight: bold;
-    font-family: Alice;
-    font-size: 1.5rem;
-    font-weight: 400;
+    
+    font-family: "philosopher";
+    font-size: 1rem;
+    
     line-height: ${(props) => props.title};
     letter-spacing: 0.5px;
     text-align: ${(props) => props.color};
@@ -65,14 +65,12 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
     color:#ffffff;
-    font-family: "Shadows Into Light";
+    font-family: "Tangerine";
     font-weight: bold;
-    font-size: 1rem;
-    font-weight: 800;
+    font-size: 1.3rem;
+    font-weight: 700;
     line-height: 23px;
     letter-spacing: 2px;
     text-align: center;
-    font-family: Shadows Into Light;
-
 
 `;
