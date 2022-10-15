@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Section = styled.section`
     position: relative;
 
-    height: 20rem;
-    width: 16rem;
+    height: 25rem;
+    width: 17rem;
 
     display: flex;
     flex-direction: column;
@@ -50,7 +50,7 @@ export const ImgAnimateBottom = styled.img`
 `;
 
 export const H1 = styled.h1`
-    color:#ffffff;
+    color: #ffffff;
     width: 100%;
     
     font-family: "elsie";
@@ -60,6 +60,7 @@ export const H1 = styled.h1`
     letter-spacing: 0.5px;
     text-align: ${(props) => props.color};
     margin-top: ${(props) => props.theme};
+    margin-left: ${(props) => props.id};
 
 `;
 
@@ -73,4 +74,16 @@ export const H2 = styled.h2`
     letter-spacing: 2px;
     text-align: center;
 
+`;
+
+export const TextShop = styled.h1`
+    color: #CD7D3F;
+    width: 100%;
+    
+    font-family: "elsie";
+    font-size: 1rem;
+    
+    line-height: ${(props) => props.title};
+    letter-spacing: 0.5px;
+    text-align: ${(props) => props.color};
 `;

@@ -11,12 +11,11 @@ import { Salmos } from "../components/message_salmos/salmos";
 import { CountTime } from "../providers/stopwatch";
 import { useContext } from "react";
 import { Context } from "../context/Context";
-import { motion } from "framer-motion";
 
 export const Intro = () => {
     const seconds = CountTime();
     const { navigate } = useContext(Context);
-    if (seconds > 4) {
+    if (seconds > 4 && seconds < 10) {
         navigate("/dashboard/intro/2");
     }
     return (

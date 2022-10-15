@@ -173,3 +173,20 @@ input::placeholder {
     font-family: roboto;
     font-size: 0.7rem;
 }
+
+.effectButton {
+    margin-left: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.click {
+    border-bottom: 2px #CD7D3F solid;
+}
+
+.svg_top {
+
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
