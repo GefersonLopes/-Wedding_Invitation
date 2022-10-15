@@ -30,17 +30,18 @@ export const ButtonGlobal = styled.button`
     color: #000;
     border: none;
     border-radius: 50px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(75,25,47,0.7);
+    }
 `;
 
 export const P = styled.p`
-    font-family: "Alice";
+    font-family: "Elise";
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0.5px;
     text-align: center;
-`;
-
-export const buttonBack = styled.button`
-    
 `;

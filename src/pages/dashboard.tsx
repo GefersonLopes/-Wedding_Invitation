@@ -13,6 +13,7 @@ import { GiPresent } from "react-icons/gi";
 import { P } from "../components/buttons/button_styled";
 import { useContext } from "react";
 import { Context } from "../context/Context";
+import { motion } from "framer-motion";
 
 export const Dashboard = () => {
     const { navigate } = useContext(Context);
@@ -42,27 +43,39 @@ export const Dashboard = () => {
                                 marginTop: "1.2rem",
                             }}
                         >
-                            <button className="button" onClick={() => navigate("/dashboard/locale")}>
+                            <button
+                                className="button"
+                                onClick={() => navigate("/dashboard/locale")}
+                            >
                                 <ButtonGlobalComponent>
                                     <IoLocationOutline className="svg" />
                                     <P className="p">Localização</P>
                                 </ButtonGlobalComponent>
                             </button>
-                            <button className="button" onClick={() => navigate("/dashboard/presence")}>
+                            <button
+                                className="button"
+                                onClick={() => navigate("/dashboard/presence")}
+                            >
                                 <ButtonGlobalComponent>
                                     <BsCheck2Square className="svg" />
                                     <P className="p">Confirmar presença</P>
                                 </ButtonGlobalComponent>
                             </button>
 
-                            <button className="button" onClick={() => navigate("/dashboard/pix")}>
+                            <button
+                                className="button"
+                                onClick={() => navigate("/dashboard/pix")}
+                            >
                                 <ButtonGlobalComponent>
                                     <MdAttachMoney className="svg" />
                                     <P className="p">Doações</P>
                                 </ButtonGlobalComponent>
                             </button>
 
-                            <button className="button" onClick={() => navigate("/dashboard/present")}>
+                            <button
+                                className="button"
+                                onClick={() => navigate("/dashboard/present")}
+                            >
                                 <ButtonGlobalComponent>
                                     <GiPresent className="svg" />
                                     <P className="p">Presentei-nos</P>

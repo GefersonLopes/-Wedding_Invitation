@@ -1,8 +1,4 @@
-import TN from "../img/TN.png";
-
 import { AnimateIntroLogo } from "../animated/introLogo";
-
-import { Img } from "../Styles/intro/intro_Styled";
 import { FeatureGlobal } from "../components/feature_global/feature_global";
 import {
     Container,
@@ -12,14 +8,11 @@ import {
 import { AlterRoutes } from "../components/alterRoutes/alterRoutes";
 
 import { Salmos } from "../components/message_salmos/salmos";
-import { CountTime } from "../providers/stopwatch";
-import { ButtonStyled } from "../components/buttons/button_styled";
 import { useContext } from "react";
 import { Context } from "../context/Context";
 import { Button } from "../components/buttons/button";
 
 export const Intro_part3 = () => {
-    const seconds = CountTime();
     const { navigate } = useContext(Context);
     return (
         <>
@@ -31,18 +24,21 @@ export const Intro_part3 = () => {
                             José Juraci Da Luz Lopes <br /> Maurina Almeida
                             Lopes <br /> E <br /> Neuza Santos Oliveira <br />{" "}
                             Valter Santos Oliveira
-                            {/* JOSÉ JURACI DA LUZ LOPES <br /> MAURINA
-                                    ALMEIDA LOPES <br /> E <br /> NEUZA SANTOS
-                                    OLIVEIRA <br /> VALTER SANTOS OLIVEIRA */}
                         </H2>
                         <H1 color="center" title="18px" theme={"1.5rem"}>
-                            CONVIDAM PARA A CERIMÔNIA DO SEUS FILHOS
+                            Convidam para a cerimônia dos seus filhos
                         </H1>
                         <button
+                        style={{
+                            width: "100%",
+                            margin: "0 auto",
+                            marginTop: "1.5rem",
+                            cursor: "pointer",
+                        }}
                             className="button"
                             onClick={() => navigate("/dashboard")}
                         >
-                            <Button>Avançar</Button>
+                            <Button>animação que gira</Button>
                         </button>
                     </AnimateIntroLogo>
                 </FeatureGlobal>

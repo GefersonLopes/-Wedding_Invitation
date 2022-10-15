@@ -53,7 +53,7 @@ export const H1 = styled.h1`
     color:#ffffff;
     width: 100%;
     
-    font-family: "philosopher";
+    font-family: "elsie";
     font-size: 1rem;
     
     line-height: ${(props) => props.title};

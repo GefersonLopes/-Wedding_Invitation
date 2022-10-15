@@ -155,3 +155,21 @@ body {
     background-color: transparent;
     border: none;
 }
+
+input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1.5px #CD7D3F;
+    color: #fff;
+    font-size: 0.7rem;
+    font-family: roboto;
+    outline: none;
+    
+}
+
+input::placeholder {
+    color: #fff;
+    font-family: roboto;
+    font-size: 0.7rem;
+}

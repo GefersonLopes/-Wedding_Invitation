@@ -4,24 +4,19 @@ import { AnimateIntroLogo } from "../animated/introLogo";
 
 import { Img } from "../Styles/intro/intro_Styled";
 import { FeatureGlobal } from "../components/feature_global/feature_global";
-import {
-    Container,
-    H1,
-    H2,
-} from "../components/feature_global/feature_global_styled";
+import { Container } from "../components/feature_global/feature_global_styled";
 import { AlterRoutes } from "../components/alterRoutes/alterRoutes";
 
 import { Salmos } from "../components/message_salmos/salmos";
 import { CountTime } from "../providers/stopwatch";
-import { ButtonStyled } from "../components/buttons/button_styled";
 import { useContext } from "react";
 import { Context } from "../context/Context";
-import { Button } from "../components/buttons/button";
+import { motion } from "framer-motion";
 
 export const Intro = () => {
     const seconds = CountTime();
     const { navigate } = useContext(Context);
-    if(seconds > 4) {
+    if (seconds > 4) {
         navigate("/dashboard/intro/2");
     }
     return (

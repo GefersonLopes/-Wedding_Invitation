@@ -38,7 +38,7 @@ export const Locale = () => {
                             display: "flex",
                             flexDirection: "column",
                             gap: "0.4rem",
-                            marginTop: "1.2rem",
+                            marginTop: "0.5rem",
                         }}
                     >
                         <button className="button" onClick={() => navigate("/dashboard/presence")}>
