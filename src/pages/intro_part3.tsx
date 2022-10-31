@@ -4,42 +4,68 @@ import {
     Container,
     H1,
     H2,
+    NameDads,
+    TitleInvitation,
 } from "../components/feature_global/feature_global_styled";
 import { AlterRoutes } from "../components/alterRoutes/alterRoutes";
 
 import { Salmos } from "../components/message_salmos/salmos";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../context/Context";
-import { Button } from "../components/buttons/button";
+import { ButtonStyled } from "../components/buttons/button_styled";
+
+import {
+    HeartComponent,
+    LoadComponent,
+} from "../components/lottieJson/HeartComponent";
+import { TextButtonOne } from "../components/dataLocation/dataLocation_Styles";
 
 export const Intro_part3 = () => {
     const { navigate } = useContext(Context);
+    const [click, setClick] = useState(false);
+    
+    const route = () => {
+        navigate("/dashboard")
+    };
+
+    const startClick = () => {
+        setClick(!click);
+        
+    };
+
     return (
         <>
             <Container>
                 <FeatureGlobal>
                     <AlterRoutes />
                     <AnimateIntroLogo>
-                        <H2>
-                            José Juraci Da Luz Lopes <br /> Maurina Almeida
-                            Lopes <br /> E <br /> Neuza Santos Oliveira <br />{" "}
+                        <NameDads>
+                            José Juraci Da L. Lopes <br /> Maurina Almeida Lopes{" "}
+                            <HeartComponent /> Neuza Santos Oliveira <br />{" "}
                             Valter Santos Oliveira
-                        </H2>
-                        <H1 color="center" title="18px" theme={"1.5rem"}>
+                        </NameDads>
+                        <TitleInvitation>
                             Convidam para a cerimônia dos seus filhos
-                        </H1>
-                        <button
-                        style={{
-                            width: "100%",
-                            margin: "0 auto",
-                            marginTop: "1.5rem",
-                            cursor: "pointer",
-                        }}
-                            className="button"
-                            onClick={() => navigate("/dashboard")}
-                        >
-                            <Button>animação que gira</Button>
-                        </button>
+                        </TitleInvitation>
+                        {click ? (
+                            <LoadComponent />
+                        ) : (
+                            <ButtonStyled
+                                style={{
+                                    width: "100%",
+                                    margin: "0 auto",
+                                    marginTop: "1.5rem",
+                                    cursor: "pointer",
+                                }}
+                                className="button"
+                                onClick={() => {
+                                    startClick();
+                                    setTimeout(route,3000);
+                                }}
+                            >
+                                <TextButtonOne>Avançar</TextButtonOne>
+                            </ButtonStyled>
+                        )}
                     </AnimateIntroLogo>
                 </FeatureGlobal>
             </Container>

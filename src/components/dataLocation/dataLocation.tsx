@@ -10,6 +10,11 @@ export const DataLocation = () => {
             style={{
                 height: "70%",
                 width: "100%",
+                marginTop: "-2rem",
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.05rem"
+
             }}
         >
             <Div>
@@ -17,7 +22,7 @@ export const DataLocation = () => {
                     <IoLocationOutline className="svg" />
                     <H3>LOCAL:</H3>
                 </Div_division>
-                <P>FAZENDA CANTO DOS PASSAROS</P>
+                <P>ESPAÇO DO TADEU</P>
             </Div>
             <Div>
                 <Div_division>
@@ -45,7 +50,7 @@ export const DataLocation = () => {
                     <MdDirectionsBike className="svg" />
                     <H3>NÃO SABE ONDE É?</H3>
                 </Div_division>
-                <a className="a" href="">
+                <a className="a" href="https://goo.gl/maps/ZMFdncpnC6TZj7zc6" target="_blank">
                     <P>CLIQUE AQUI PARA IR AO GOOGLE MAPS</P>
                 </a>
             </Div>

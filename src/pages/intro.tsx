@@ -8,16 +8,16 @@ import { Container } from "../components/feature_global/feature_global_styled";
 import { AlterRoutes } from "../components/alterRoutes/alterRoutes";
 
 import { Salmos } from "../components/message_salmos/salmos";
-import { CountTime } from "../providers/stopwatch";
 import { useContext } from "react";
 import { Context } from "../context/Context";
 
 export const Intro = () => {
-    const seconds = CountTime();
     const { navigate } = useContext(Context);
-    if (seconds > 4 && seconds < 10) {
+    const route = () => {
         navigate("/dashboard/intro/2");
-    }
+    };
+    setTimeout(route, 4000)
+
     return (
         <>
             <Container>

@@ -1,9 +1,9 @@
 import { INode } from "../../context/Context";
-import { H1 } from "../feature_global/feature_global_styled";
+import { H1, H1TitleRoutes } from "../feature_global/feature_global_styled";
 
 export const TitleRoutes = ({ children }: INode) => {
     return (
-        <H1
+        <H1TitleRoutes
             style={{
                 textAlign: "center",
                 marginBottom: "1rem",
@@ -11,6 +11,6 @@ export const TitleRoutes = ({ children }: INode) => {
             }}
         >
             {children}
-        </H1>
+        </H1TitleRoutes>
     );
 };

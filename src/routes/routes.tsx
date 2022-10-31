@@ -4,7 +4,7 @@ import { Intro } from "../pages/intro";
 import { Locale } from "../pages/locale";
 import { Pix } from "../pages/pix";
 import { Presence } from "../pages/presence";
-import { Present } from "../pages/present";
+import { Gift } from "../pages/gift";
 
 import { Route, Routes } from "react-router-dom";
 import { Intro_part2 } from "../pages/intro_part2";
@@ -21,7 +21,7 @@ export const RouteInPage = (): any => {
             <Route path="/dashboard/presence" element={<Presence />} />
             <Route path="/dashboard/pix" element={<Pix />} />
             <Route path="/dashboard/card" element={<Card />} />
-            <Route path="/dashboard/present" element={<Present />} />
+            <Route path="/dashboard/gift" element={<Gift />} />
         </Routes>
     );
 };

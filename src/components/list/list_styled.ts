@@ -19,7 +19,7 @@ export const Li = styled.li`
 export const Img = styled.img`
     height: 90%;
     width: 4rem;
-    border-radius: 20px;
+    border-radius: 15px;
     margin: 0.3rem 0 0 0.5rem;
 `;
 

@@ -40,3 +40,15 @@ export const P = styled.p`
     text-align: center;
     color: #cd7d3f;
 `;
+
+export const TextButtonOne = styled.p`
+
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 0.7rem;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #cd7d3f;
+
+`;

@@ -10,7 +10,7 @@ export const AnimateIntroLogo = ({children}: INode) => {
                 opacity: 1,
             }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 2.5 }}
+            transition={{ duration: 2.3 }}
         >
             {children}
         </motion.main>

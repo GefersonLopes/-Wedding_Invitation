@@ -3,16 +3,14 @@ import { GiPresent } from "react-icons/gi";
 import { IoLocationOutline } from "react-icons/io5";
 import { AnimateIntroLogo } from "../animated/introLogo";
 import { AlterRoutes } from "../components/alterRoutes/alterRoutes";
-import {
-    ButtonBack,
-    ButtonGlobalComponent,
-} from "../components/buttons/button";
-import { P } from "../components/buttons/button_styled";
+import { Back } from "../components/buttons/button";
+import { ButtonGlobal, P } from "../components/buttons/button_styled";
 import { DataPresence } from "../components/dataPresence/datapresence";
 import { FeatureGlobal } from "../components/feature_global/feature_global";
 import { Container } from "../components/feature_global/feature_global_styled";
 import { TitleRoutes } from "../components/titleRoutes/titleRoutes";
 import { Context } from "../context/Context";
+
 
 export const Presence = () => {
     const { navigate } = useContext(Context);
@@ -27,9 +25,9 @@ export const Presence = () => {
                         className="button"
                         onClick={() => navigate("/dashboard")}
                     >
-                        <ButtonBack />
+                        <Back />
                     </button>
-                    <DataPresence/>
+                    <DataPresence />
                     <div
                         style={{
                             display: "flex",
@@ -38,25 +36,21 @@ export const Presence = () => {
                             marginTop: "1.2rem",
                         }}
                     >
-                        <button
+                        <ButtonGlobal
                             className="button"
                             onClick={() => navigate("/dashboard/locale")}
                         >
-                            <ButtonGlobalComponent>
-                                <IoLocationOutline className="svg" />
-                                <P className="p">Localização</P>
-                            </ButtonGlobalComponent>
-                        </button>
+                            <IoLocationOutline className="svg" />
+                            <P className="p">Localização</P>
+                        </ButtonGlobal>
 
-                        <button
+                        <ButtonGlobal
                             className="button"
-                            onClick={() => navigate("/dashboard/present")}
+                            onClick={() => navigate("/dashboard/gift")}
                         >
-                            <ButtonGlobalComponent>
-                                <GiPresent className="svg" />
-                                <P className="p">Presentei-nos</P>
-                            </ButtonGlobalComponent>
-                        </button>
+                            <GiPresent className="svg" />
+                            <P className="p">Presentei-nos</P>
+                        </ButtonGlobal>
                     </div>
                 </AnimateIntroLogo>
             </FeatureGlobal>

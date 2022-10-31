@@ -147,8 +147,8 @@ body {
 }
 
 .a {
-	margin-top: 0.3rem;
-	text-decoration: none;
+    margin-top: 0.3rem;
+    text-decoration: none;
 }
 
 .button {
@@ -160,12 +160,11 @@ input {
     width: 100%;
     background-color: transparent;
     border: none;
-    border-bottom: solid 1.5px #CD7D3F;
+    border-bottom: solid 1.5px #cd7d3f;
     color: #fff;
     font-size: 0.7rem;
     font-family: roboto;
     outline: none;
-    
 }
 
 input::placeholder {
@@ -181,12 +180,15 @@ input::placeholder {
 }
 
 .click {
-    border-bottom: 2px #CD7D3F solid;
+    border-bottom: 2px #cd7d3f solid;
 }
 
 .svg_top {
-
     position: absolute;
     top: 0.5rem;
     right: 1rem;
+}
+
+ul::-webkit-scrollbar {
+    display: none;
 }

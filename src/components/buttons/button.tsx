@@ -1,45 +1,7 @@
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
-import { INode } from "../../context/Context";
-import { ButtonGlobal, ButtonStyled } from "./button_styled";
 import { motion } from "framer-motion";
 
-export const Button = ({ children }: INode) => {
-    return (
-        <div
-            style={{
-                width: "100%",
-                margin: "0 auto",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginTop: "1rem",
-                fontFamily: "Elsie",
-                cursor: "pointer",
-            }}
-        >
-            <ButtonStyled>{children}</ButtonStyled>
-        </div>
-    );
-};
-
-export const ButtonGlobalComponent = ({ children }: INode) => {
-    return (
-        <div
-            style={{
-                width: "100%",
-                margin: "0 auto",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer",
-            }}
-        >
-            <ButtonGlobal>{children}</ButtonGlobal>
-        </div>
-    );
-};
-
-export const ButtonBack = () => {
+export const Back = () => {
     return (
         <motion.div
             style={{
@@ -76,7 +38,7 @@ export const ButtonBack = () => {
     );
 };
 
-export const ButtonShop = () => {
+export const Shop = () => {
     return (
         <motion.div
             style={{
@@ -89,9 +51,9 @@ export const ButtonShop = () => {
                 cursor: "pointer",
             }}
             initial={{ y: -15 }}
-            animate={{ y: [-10,-5,0] }}
+            animate={{ y: 0}}
             exit={{ y: -15 }}
-            transition={{ type: "spring", stiffness: 500, damping: 20, duration: 1, repeat: Infinity }}
+            transition={{ type: "spring", stiffness: 500, damping: 20, duration: 0.8, repeat: Infinity }}
         >
             <p
                 style={{
