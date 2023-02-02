@@ -41,7 +41,8 @@ export const DataPresence = () => {
         axios
             .patch(
                 "http://ec2-18-231-114-17.sa-east-1.compute.amazonaws.com:3001/users",
-                data
+                data,
+                { rejectUnauthorized: false }
             )
             .then((res) => {
                 console.log(res);
