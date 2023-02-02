@@ -7,6 +7,7 @@ import { ButtonStyled } from "../buttons/button_styled";
 import { useForm, Resolver } from "react-hook-form";
 import { RiEmotionSadLine } from "react-icons/ri";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 interface IUser {
     name: string;
@@ -37,32 +38,32 @@ export const DataPresence = () => {
     const onSubmit = handleSubmit((data) => {
         console.log(data);
 
-        if (data.name !== "Geferson") {
-            toast.error(
-                `${data.name}, Não consegui achar seus dados na lista de convidados`,
-                {
-                    position: "bottom-center",
-                    autoClose: 7000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "colored",
-                }
-            );
-        } else {
-            toast.success(`${data.name}, Presença confirmada! olhe seu email para detalhes`, {
-                position: "bottom-center",
-                autoClose: 7000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                });
-        }
+        axios
+            .patch(
+                "http://ec2-18-231-114-17.sa-east-1.compute.amazonaws.com:3001/users",
+                data
+            )
+            .then((res) => {
+                console.log(res);
+                toast.success(
+                    `${data.name}, Presença confirmada! olhe seu email para detalhes`,
+                    {
+                        position: "bottom-center",
+                        autoClose: 10000,
+                        theme: "colored",
+                    }
+                );
+            })
+            .catch((error) => {
+                toast.error(
+                    `${data.name}, Não consegui achar seus dados na lista de convidados`,
+                    {
+                        position: "bottom-center",
+                        autoClose: 7000,
+                        theme: "colored",
+                    }
+                );
+            });
     });
 
     return (
