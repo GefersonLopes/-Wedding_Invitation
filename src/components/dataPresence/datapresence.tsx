@@ -39,11 +39,7 @@ export const DataPresence = () => {
         console.log(data);
 
         axios
-            .patch(
-                "http://ec2-18-231-114-17.sa-east-1.compute.amazonaws.com:3001/users",
-                data,
-                { rejectUnauthorized: false }
-            )
+            .patch("https://invitate-ul6o.onrender.com/users", data)
             .then((res) => {
                 console.log(res);
                 toast.success(
